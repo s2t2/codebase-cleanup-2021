@@ -16,7 +16,8 @@
 
 # EXPECT THAT THE ENLARGE FUNCTION RETURNS A LARGER NUMBER
 
-from app.example import enlarge
+from app.example import enlarge, to_usd
+#from app.example import to_usd
 
 def test_enlarge():
     #assert True
@@ -26,6 +27,8 @@ def test_enlarge():
     assert enlarge(9) == 900
 
 
-
-
 # EXPECT THAT WE GET A ROUNDED STRING BACK WITH DOLLAR SIGN
+
+def test_to_usd():
+    #assert to_usd(23.2222) == "$23.23"
+    assert to_usd(23.2222) == "$23.22"
